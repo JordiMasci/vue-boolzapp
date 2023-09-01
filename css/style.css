@@ -78,11 +78,15 @@ header {
 }
 
 .chats {
+    overflow: hidden;
+}
+
+.chat {
     min-height: 70px;
     padding: 15px;
 }
 
-.chats img {
+.chat img {
   margin-right: 10px;
 }
 
