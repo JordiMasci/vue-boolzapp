@@ -31,19 +31,40 @@ body {
   height: 100%;
 }
 
+/* HEADER */
+header {
+    min-height: 60px;
+    padding: 5px;
+    background-color: #eaeaea;
+}
+
 /* COLONNA SINISTRA */
 .col-sx {
   border: 2px dashed black;
   width: 40%;
 }
 
-header {
-    min-height: 50px;
-    padding: 15px;
+.col-sx img {
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
 }
 
-.fa-solid {
-    color: lightgray;
+.notifiche {
+    min-height: 60px;
+    padding: 15px;
+    background-color: hsl(198.55deg 94.83% 77.25%);
+}
+
+.notifiche .fa-solid {
+    background-color: white;
+    color: hsl(198.55deg 94.83% 77.25%);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 7px;
 }
 
 
@@ -55,4 +76,26 @@ header {
 .col-dx {
   border: 2px dashed green;
   width: 60%;
+}
+
+.col-dx img {
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
+/* UTILITIES */
+
+.fa-solid {
+    color: #b1b1b1;
+}
+
+.font-size-sm {
+    font-size: 12px;
+}
+
+.font-size-md {
+    font-size: 14px;
 }
