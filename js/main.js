@@ -169,6 +169,7 @@ createApp({
   data() {
     return {
       contacts,
+      activeContactIndex: 0,
     };
   },
 }).mount("#app");

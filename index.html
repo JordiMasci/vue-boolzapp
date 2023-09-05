@@ -97,13 +97,13 @@
             <div class="chats">
               <div
                 class="chat d-flex justify-content-between border-bottom align-items-center"
-                v-for="contact in contacts"
+                v-for="(contact, index) in contacts" @click=""
               >
                 <span class="d-flex">
                   <img :src="contact.avatar" alt="" />
 
                   <div class="d-flex flex-column">
-                    <span>{{ contact.name }}</span>
+                    <span>{{ index }} - {{ contact.name }}</span>
                     <span class="fw-lighter font-size-sm"
                       >Ultimo messaggio inviato</span
                     >
@@ -144,8 +144,13 @@
 
             <!-- MAIN -->
             <div class="messages">
-              <div class="message sent">asd</div>
-              <div class="message received">asd</div>
+              <div
+                class="message"
+                :class="message.status"
+                v-for="message in contacts[activeContactIndex].messages"
+              >
+                {{ message.message }}
+              </div>
             </div>
 
             <!-- FOOTER -->
