@@ -188,6 +188,16 @@ createApp({
       const messageToPush = { ...this.newMessage };
       this.contacts[this.activeContactIndex].messages.push(messageToPush);
       this.newMessage.message = "";
+
+      setTimeout(() => {
+        const newAnswer = {
+            date: '...',
+            message: 'ok',
+            status: 'received',
+        }
+
+        this.contacts[this.activeContactIndex].messages.push(newAnswer);
+      }, 1000)
     },
   },
 }).mount("#app");
