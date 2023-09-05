@@ -97,7 +97,8 @@
             <div class="chats">
               <div
                 class="chat d-flex justify-content-between border-bottom align-items-center"
-                v-for="(contact, index) in contacts" @click=""
+                v-for="(contact, index) in contacts"
+                @click="setActiveContactIndex(index)"
               >
                 <span class="d-flex">
                   <img :src="contact.avatar" alt="" />

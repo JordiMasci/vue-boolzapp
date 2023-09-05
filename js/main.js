@@ -172,4 +172,10 @@ createApp({
       activeContactIndex: 0,
     };
   },
+
+  methods: {
+    setActiveContactIndex(index){
+        this.activeContactIndex = index;
+    }
+  }
 }).mount("#app");
