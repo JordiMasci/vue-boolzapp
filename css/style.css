@@ -33,93 +33,130 @@ body {
 
 /* HEADER */
 header {
-    min-height: 60px;
-    padding: 5px;
-    background-color: #eaeaea;
+  min-height: 60px;
+  padding: 5px;
+  background-color: #eaeaea;
 }
 
 /* COLONNA SINISTRA */
 .col-sx {
   border: 2px dashed black;
   width: 40%;
+  overflow-y: auto;
 }
 
 .col-sx img {
-    width: 50px;
-    height: 100%;
-    border-radius: 50%;
+  width: 50px;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .notifiche {
-    min-height: 60px;
-    padding: 15px;
-    background-color: hsl(198.55deg 94.83% 77.25%);
+  min-height: 60px;
+  padding: 15px;
+  background-color: hsl(198.55deg 94.83% 77.25%);
 }
 
 .notifiche .fa-solid {
-    background-color: white;
-    color: hsl(198.55deg 94.83% 77.25%);
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    line-height: 30px;
-    margin-right: 7px;
+  background-color: white;
+  color: hsl(198.55deg 94.83% 77.25%);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 7px;
 }
 
 .ricerca {
-    background-color: #eaeaea;
-    padding: 10px;
-    height: auto;
+  background-color: #eaeaea;
+  padding: 10px;
+  height: auto;
 }
 
 .ricerca .btn {
-    background-color: white;
-}
-
-.chats {
-    overflow: hidden;
+  background-color: white;
 }
 
 .chat {
-    min-height: 70px;
-    padding: 15px;
+  min-height: 70px;
+  padding: 15px;
 }
 
 .chat img {
   margin-right: 10px;
 }
 
-
-
-
-
 /* COLONNA DESTRA */
 
 .col-dx {
   border: 2px dashed green;
   width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .col-dx img {
-    width: 50px;
-    height: 100%;
-    border-radius: 50%;
-    margin-right: 10px;
+  width: 50px;
+  height: 100%;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
+/* .back-img {
+    background-image: url("img_mine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+} */
 
+
+
+.messages {
+    flex-grow: 1;
+    background-image: url("../img/mine.jpg");
+
+    padding: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: auto;
+}
+
+.messages > .message {
+  max-width: 60%;
+  border-radius: 5px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  align-self: flex-start;
+}
+
+.messages > .message.sent {
+  background-color: green;
+
+  align-self: flex-end;
+}
+
+.messages > .message.received {
+  background-color: lightgray;
+}
 
 /* UTILITIES */
 
 .fa-solid {
-    color: #b1b1b1;
+  color: #b1b1b1;
 }
 
 .font-size-sm {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .font-size-md {
-    font-size: 14px;
+  font-size: 14px;
+}
+
+.align-self {
+  align-self: flex-start;
 }
