@@ -170,12 +170,24 @@ createApp({
     return {
       contacts,
       activeContactIndex: 0,
+
+      newMessage: {
+        date: "...",
+        message: "",
+        status: "sent",
+      },
     };
   },
 
   methods: {
-    setActiveContactIndex(index){
-        this.activeContactIndex = index;
-    }
-  }
+    setActiveContactIndex(index) {
+      this.activeContactIndex = index;
+    },
+
+    sendNewMessage() {
+      const messageToPush = { ...this.newMessage };
+      this.contacts[this.activeContactIndex].messages.push(messageToPush);
+      this.newMessage.message = "";
+    },
+  },
 }).mount("#app");

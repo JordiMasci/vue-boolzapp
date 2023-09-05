@@ -169,6 +169,9 @@
                 placeholder=""
                 aria-label="Example text with button addon"
                 aria-describedby="button-addon1"
+
+                v-model="newMessage.message"
+                @keyUp.enter="sendNewMessage()"
               />
               <button
                 class="btn btn-outline-secondary"
