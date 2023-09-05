@@ -120,10 +120,10 @@
             <!-- Header -->
             <header class="d-flex justify-content-between border-bottom">
               <span class="d-flex align-items-center">
-                <img src="img/avatar_1.jpg" alt="" />
+                <img :src="contacts[activeContactIndex].avatar" alt="" />
 
                 <div class="d-flex flex-column">
-                  <span>Michele</span>
+                  <span>{{ contacts[activeContactIndex].name}}</span>
                   <span class="fw-lighter font-size-sm"
                     >Ultimo accesso oggi alle 12:00</span
                   >
